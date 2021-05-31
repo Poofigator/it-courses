@@ -24,6 +24,7 @@ class CalculatorActivity : BaseActivity<CalculatorView, CalculatorPresenter>(), 
     private val buttonNum8: Button by lazyUnsafe { findViewById(R.id.buttonNum8) }
     private val buttonNum9: Button by lazyUnsafe { findViewById(R.id.buttonNum9) }
     private val buttonNum0: Button by lazyUnsafe { findViewById(R.id.buttonNum0) }
+    private val buttonNumDot: Button by lazyUnsafe { findViewById(R.id.buttonDot) }
 
     private val buttonSub: Button by lazyUnsafe { findViewById(R.id.buttonSub) }
     private val buttonSum: Button by lazyUnsafe { findViewById(R.id.buttonSum) }
@@ -45,6 +46,7 @@ class CalculatorActivity : BaseActivity<CalculatorView, CalculatorPresenter>(), 
         buttonNum8.setOnClickListener { presenter.onNum8Click() }
         buttonNum9.setOnClickListener { presenter.onNum9Click() }
         buttonNum0.setOnClickListener { presenter.onNum0Click() }
+        buttonNumDot.setOnClickListener { presenter.onNumDotClick() }
 
         buttonSub.setOnClickListener { presenter.onSubClick() }
         buttonSum.setOnClickListener { presenter.onSumClick() }
